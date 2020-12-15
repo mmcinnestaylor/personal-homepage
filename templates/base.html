@@ -18,6 +18,11 @@
 			height: 200px;
 			background: #aaa;
 		}
+		.sticky {
+			position: fixed;
+			top: 0;
+			width: 100%;
+		}
 	</style>
 	{% endblock %}
 </head>
@@ -30,8 +35,8 @@ background: linear-gradient(0deg, rgba(137,150,153,1) 0%, rgba(127,255,212,1) 10
 		<p>Undergraduate Student | Aspiring AI Researcher</p>
 	</div>
 
-	<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
-		<a class="navbar-brand" href="./index.html">Marlan McInnes-Taylor</a>
+	<nav class="navbar navbar-expand-sm bg-dark navbar-dark" id="myHeader">
+		<a class="navbar-brand" href="./index.html">Home</a>
 		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
 			<span class="navbar-toggler-icon"></span>
 		</button>
@@ -50,7 +55,7 @@ background: linear-gradient(0deg, rgba(137,150,153,1) 0%, rgba(127,255,212,1) 10
 		</div>
 	</nav>
 
-	<div class="container" style="margin-top:30px">
+	<div class="container pb-0" style="margin-top:30px">
 		<div class="row">
 			<div class="col-sm-4">
 				<img class="rounded"src="self.jpeg" alt="Headshot" height="200" width="200">
@@ -84,27 +89,35 @@ background: linear-gradient(0deg, rgba(137,150,153,1) 0%, rgba(127,255,212,1) 10
 			</div>
 		</div>
 	</div>
-
-	<footer>
-		<div class="jumbotron p-2" style="background: #E0E0E0; margin-bottom:0">
-			<div class="container">
-				<div class="row">
-					<div class="col-sm align-text-bottom">
-						
-					</div>
-					<div class="col-sm text-center">
-						<p class="">&copy; 2020 Marlan McInnes-Taylor</p>
-					</div>
-					<div class="col-sm">
-						<!-- <img class=""src="https://www.boincstats.com/signature/-1/user/571340/sig.png" alt="BOINC Stats"> -->
-					</div>
+	<footer style="background-color: #E0E0E0;">
+		<div class="container">
+			<div class="row align-items-end">
+				<div class="col-sm">
+				</div>
+				<div class="col-sm text-center my-2">
+					<span class="">&copy; 2020 Marlan McInnes-Taylor</span>
+					
+				</div>
+				<div class="col-sm ">
+					<!-- <img class="py-2"src="https://www.boincstats.com/signature/-1/user/571340/sig.png" alt="BOINC Stats"> -->
 				</div>
 			</div>
-			
-			
 		</div>
 	</footer>
-	
-</body>
 
+	<script>
+		window.onscroll = function () { myFunction() };
+
+		var header = document.getElementById("myHeader");
+		var sticky = header.offsetTop;
+
+		function myFunction() {
+			if (window.pageYOffset > sticky) {
+				header.classList.add("sticky");
+			} else {
+				header.classList.remove("sticky");
+			}
+		}
+	</script>
+</body>
 </html>
