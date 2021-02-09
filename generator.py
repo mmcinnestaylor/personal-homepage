@@ -9,6 +9,6 @@ for dirName, subdirList, fileList in os.walk(templates_dir):
 	for fname in fileList:
 		template = env.get_template(fname)
 
-		filename = os.path.join(root, 'html', fname)
+		filename = os.path.join(root, 'production', fname)
 		with open(filename, 'w') as fh:
 			fh.write(template.render())
