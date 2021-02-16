@@ -1,12 +1,11 @@
 {% extends "base.html" %}
 
-{% block title %}Error{% endblock %}
+{% block title %}{{ error_code }}{% endblock %}
 
 {% block content %}
-<div class="row justify-content-center">
-	<h4 class="display-4 mb-4">An error we have encountered...</h4>
-
-	<img src="img/robot.png" class="img-fluid w-75 h-75" alt="ERROR">
-</div>
-
+	<div class="text-center">
+		<h1 class="display-1 mt-5">{{ error_code }}</h1>
+		<hr class="w-50 bg-secondary">
+		<h2 class="display-4 mt-3">{{ error_description }}</h2>
+	</div>
 {% endblock %}
