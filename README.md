@@ -1,2 +1,2 @@
 # mmcinnestaylor.com
-Personal website and portfolio
+Career and portfolio static website utilizing Jinja2 templating and deployment via AWS S3 + CloudFront.
