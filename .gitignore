@@ -1,4 +1,3 @@
 
 .vscode/settings.json
-html/
-unused_templates/
+src/production/*.html

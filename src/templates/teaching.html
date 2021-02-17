@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block title %}Teaching{% endblock %}
+
+{% block content %}
+
+<h1 class="mb-4">Teaching</h1>
+{% for year, details in teaching_appointments.items() %}
+	<h4>{{ year }}</h4>
+	{% for detail in details %}
+		<div class="list-group mb-3">
+			<div class="list-group-item flex-column align-items-start">
+				<div class="d-flex w-100 justify-content-between">
+					<h5 class="mb-1">{{ detail.course }}</h5>
+					<small class="text-muted">{{ detail.semester }}</small>
+				</div>
+				<p class="mb-1">{{ detail.position }}</p>
+			</div>
+		</div>
+	{% endfor %}
+{% endfor %}
+
+{% endblock %}
