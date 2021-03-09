@@ -15,7 +15,7 @@
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 	<script src="https://kit.fontawesome.com/7814f8aa4c.js" crossorigin="anonymous"></script>
 	<style>
-		html {
+		html, body {
 			height: 100%; 
 		}
 		body {
@@ -23,7 +23,11 @@
 		}
 		footer {
 			background: #D3D3D3;
-			bottom: 0;
+			
+		}
+		.container {
+			min-height: 100%;
+			overflow: hidden;
 		}
 	</style>
 </head>
@@ -60,17 +64,17 @@ background: linear-gradient(0deg, rgba(51,58,64,1) 0%, rgba(127,255,212,1) 100%)
 			<div class="col-sm-3 text-center">
 				<img class=" img-fluid align-center rounded"src="img/self.jpeg" alt="Headshot" height="200" width="200">
 				<div class="my-2">
-					<a class="text-dark" href="mailto:mmcinnestaylor@gmail.com" target="_blank" title="Email"><i class="far fa-envelope fa-lg mx-2"></i></a>
+					<a class="text-dark" href="mailto:mmcinnestaylor@protonmail.com" target="_blank" title="Email"><i class="far fa-envelope fa-lg mx-2"></i></a>
 					<a class="text-dark" href="http://linkedin.com/in/mmcinnestaylor" target="_blank" title="Linkedin"><i class="fab fa-linkedin fa-lg mx-2"></i></a>
 					<a class="text-dark" href="https://twitter.com/mmcinnestaylor" target="_blank" title="Twitter"><i class="fab fa-twitter fa-lg mx-2"></i></a>
 					<a class="text-dark" href="http://github.com/mmcinnestaylor" target="_blank" title="GitHub"><i class="fab fa-github fa-lg mx-2"></i></a>
 				</div>
 				
-				<span class="text-muted">mmcinnestaylor [at gmail dot com]</span>
+				<small class="text-secondary">mmcinnestaylor [at] protonmail [dot] com</small>
 				<hr class="bg-secondary w-80">
 				<ul class="text-left">
-					<li><a  href="https://drive.google.com/file/d/1ahKGNEGhLTyfgLYYGunMHyAHnEPP7dXp/view" target="_blank">CV</a> <small>[<a href="https://drive.google.com/uc?export=download&id=1ahKGNEGhLTyfgLYYGunMHyAHnEPP7dXp" target="_blank">Download</a>]</small></li>
-					<li><a  href="https://scholar.google.com/citations?user=zOXxor8AAAAJ" target="_blank">Google Scholar</a></li>
+					<li><a  href="https://drive.google.com/file/d/1ahKGNEGhLTyfgLYYGunMHyAHnEPP7dXp/view" target="_blank" title="Curriculum Vitae">CV</a> <small>[<a href="https://drive.google.com/uc?export=download&id=1ahKGNEGhLTyfgLYYGunMHyAHnEPP7dXp" target="_blank" title="Download CV">Download</a>]</small></li>
+					<li><a  href="https://scholar.google.com/citations?user=zOXxor8AAAAJ" target="_blank" title="Google Scholar Profile">Google Scholar</a></li>
 				</ul>
 				<hr class="d-sm-none">
 				
@@ -114,16 +118,17 @@ background: linear-gradient(0deg, rgba(51,58,64,1) 0%, rgba(127,255,212,1) 100%)
 			</div>
 		</div>
 	</div>
-</body>
-<footer class="position-fixed mt-4 w-100">
-	<div class="container">
-		<div class="row align-items-end">
-			<div class="col-sm"></div>
-			<div class="col-sm text-center my-2">
-				<small>&copy; 2020-2021 Marlan McInnes-Taylor</small>
+	<footer class="mt-3">
+		<div class="container">
+			<div class="row align-items-end">
+				<div class="col-sm"></div>
+				<div class="col-sm text-center my-2">
+					<small>&copy; 2020-2021 Marlan McInnes-Taylor</small>
+				</div>
+				<div class="col-sm "></div>
 			</div>
-			<div class="col-sm "></div>
 		</div>
-	</div>
-</footer>
+	</footer>
+</body>
+
 </html>
