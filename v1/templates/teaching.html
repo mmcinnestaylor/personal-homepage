@@ -9,12 +9,18 @@
 	<h4>{{ year }}</h4>
 	{% for detail in details %}
 		<div class="list-group mb-3">
-			<div class="list-group-item flex-column align-items-start">
+			<div class="list-group-item flex-column align-items-start bg-light">
 				<div class="d-flex w-100 justify-content-between">
 					<h5 class="mb-1">{{ detail.course }}</h5>
 					<small class="text-muted ml-2">{{ detail.semester }}</small>
 				</div>
-				<p class="mb-1">{{ detail.position }}</p>
+				<div class="d-flex w-100 justify-content-between">
+					<p class="mb-1">{{ detail.position }}</p>
+					{% if detail.website %}
+						<a class="btn btn-primary btn-sm text-center" href="{{ detail.website }}" role="button" title="Course Website"><i class="fas fa-server fa-lg"></i></a>
+					{% endif %}
+				</div>
+				
 			</div>
 		</div>
 	{% endfor %}
